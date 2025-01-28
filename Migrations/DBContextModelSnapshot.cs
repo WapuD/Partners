@@ -30,10 +30,10 @@ namespace Partner_API.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<double>("percentDefective")
+                    b.Property<double>("PercentDefective")
                         .HasColumnType("double precision");
 
-                    b.Property<string>("type")
+                    b.Property<string>("Type")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -50,22 +50,16 @@ namespace Partner_API.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("PartnerId")
+                    b.Property<int>("Count")
                         .HasColumnType("integer");
 
-                    b.Property<int?>("ProductId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("count")
-                        .HasColumnType("integer");
-
-                    b.Property<DateOnly>("date")
+                    b.Property<DateOnly>("Date")
                         .HasColumnType("date");
 
-                    b.Property<int>("partner")
+                    b.Property<int>("PartnerId")
                         .HasColumnType("integer");
 
-                    b.Property<int>("product")
+                    b.Property<int>("ProductId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -85,58 +79,58 @@ namespace Partner_API.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("city")
+                    b.Property<string>("City")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("email")
+                    b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("house")
+                    b.Property<string>("House")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("index")
+                    b.Property<string>("Index")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("inn")
+                    b.Property<string>("Inn")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("name")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("patronumic")
+                    b.Property<string>("Patronumic")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("phone")
+                    b.Property<string>("Phone")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("rating")
+                    b.Property<int>("Rating")
                         .HasColumnType("integer");
 
-                    b.Property<string>("region")
+                    b.Property<string>("Region")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("street")
+                    b.Property<string>("Street")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("surname")
+                    b.Property<string>("Surname")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("title")
+                    b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("type")
+                    b.Property<string>("Type")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -153,25 +147,22 @@ namespace Partner_API.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("TypeId")
+                    b.Property<int>("Articul")
                         .HasColumnType("integer");
 
-                    b.Property<int>("articul")
-                        .HasColumnType("integer");
-
-                    b.Property<double>("minCost")
+                    b.Property<double>("MinCost")
                         .HasColumnType("double precision");
 
-                    b.Property<string>("name")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("type")
+                    b.Property<int>("ProductTypeId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("TypeId");
+                    b.HasIndex("ProductTypeId");
 
                     b.ToTable("Product");
                 });
@@ -184,10 +175,10 @@ namespace Partner_API.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<double>("koef")
+                    b.Property<double>("Koef")
                         .HasColumnType("double precision");
 
-                    b.Property<string>("name")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -200,11 +191,15 @@ namespace Partner_API.Migrations
                 {
                     b.HasOne("Partner_API.Data.Models.Partner", "Partner")
                         .WithMany()
-                        .HasForeignKey("PartnerId");
+                        .HasForeignKey("PartnerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Partner_API.Data.Models.Product", "Product")
                         .WithMany()
-                        .HasForeignKey("ProductId");
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Partner");
 
@@ -213,11 +208,13 @@ namespace Partner_API.Migrations
 
             modelBuilder.Entity("Partner_API.Data.Models.Product", b =>
                 {
-                    b.HasOne("Partner_API.Data.Models.ProductType", "Type")
+                    b.HasOne("Partner_API.Data.Models.ProductType", "ProductType")
                         .WithMany()
-                        .HasForeignKey("TypeId");
+                        .HasForeignKey("ProductTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("Type");
+                    b.Navigation("ProductType");
                 });
 #pragma warning restore 612, 618
         }

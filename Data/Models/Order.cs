@@ -7,10 +7,10 @@ namespace Partner_API.Data.Models
     {
         [Key]
         public int Id { get; set; }
-        public int product { get; set; }
-        public int partner { get; set; }
-        public int count { get; set; }
-        public DateOnly date { get; set; }
+        public int ProductId { get; set; }
+        public int PartnerId { get; set; }
+        public int Count { get; set; }
+        public DateOnly Date { get; set; }
 
         public Partner? Partner { get; set; }
         public Product? Product { get; set; }
@@ -19,9 +19,9 @@ namespace Partner_API.Data.Models
     {
         [Key]
         public int Id { get; set; }
-        public int product { get; set; }
-        public int partner { get; set; }
-        public int count { get; set; }
-        public DateOnly date { get; set; }
+        public int ProductId { get; set; }
+        public int PartnerId { get; set; }
+        public int Count { get; set; }
+        public DateOnly Date { get; set; }
     }
 }

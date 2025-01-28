@@ -18,8 +18,8 @@ namespace Partner_API.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    type = table.Column<string>(type: "text", nullable: false),
-                    percentDefective = table.Column<double>(type: "double precision", nullable: false)
+                    Type = table.Column<string>(type: "text", nullable: false),
+                    PercentDefective = table.Column<double>(type: "double precision", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -32,20 +32,20 @@ namespace Partner_API.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    type = table.Column<string>(type: "text", nullable: false),
-                    title = table.Column<string>(type: "text", nullable: false),
-                    surname = table.Column<string>(type: "text", nullable: false),
-                    name = table.Column<string>(type: "text", nullable: false),
-                    patronumic = table.Column<string>(type: "text", nullable: false),
-                    email = table.Column<string>(type: "text", nullable: false),
-                    phone = table.Column<string>(type: "text", nullable: false),
-                    index = table.Column<string>(type: "text", nullable: false),
-                    region = table.Column<string>(type: "text", nullable: false),
-                    city = table.Column<string>(type: "text", nullable: false),
-                    street = table.Column<string>(type: "text", nullable: false),
-                    house = table.Column<string>(type: "text", nullable: false),
-                    inn = table.Column<string>(type: "text", nullable: false),
-                    rating = table.Column<int>(type: "integer", nullable: false)
+                    Type = table.Column<string>(type: "text", nullable: false),
+                    Title = table.Column<string>(type: "text", nullable: false),
+                    Surname = table.Column<string>(type: "text", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Patronumic = table.Column<string>(type: "text", nullable: false),
+                    Email = table.Column<string>(type: "text", nullable: false),
+                    Phone = table.Column<string>(type: "text", nullable: false),
+                    Index = table.Column<string>(type: "text", nullable: false),
+                    Region = table.Column<string>(type: "text", nullable: false),
+                    City = table.Column<string>(type: "text", nullable: false),
+                    Street = table.Column<string>(type: "text", nullable: false),
+                    House = table.Column<string>(type: "text", nullable: false),
+                    Inn = table.Column<string>(type: "text", nullable: false),
+                    Rating = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -58,8 +58,8 @@ namespace Partner_API.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    name = table.Column<string>(type: "text", nullable: false),
-                    koef = table.Column<double>(type: "double precision", nullable: false)
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Koef = table.Column<double>(type: "double precision", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -72,20 +72,20 @@ namespace Partner_API.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    type = table.Column<int>(type: "integer", nullable: false),
-                    name = table.Column<string>(type: "text", nullable: false),
-                    articul = table.Column<int>(type: "integer", nullable: false),
-                    minCost = table.Column<double>(type: "double precision", nullable: false),
-                    TypeId = table.Column<int>(type: "integer", nullable: true)
+                    ProductTypeId = table.Column<int>(type: "integer", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Articul = table.Column<int>(type: "integer", nullable: false),
+                    MinCost = table.Column<double>(type: "double precision", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Product", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Product_ProductType_TypeId",
-                        column: x => x.TypeId,
+                        name: "FK_Product_ProductType_ProductTypeId",
+                        column: x => x.ProductTypeId,
                         principalTable: "ProductType",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -94,12 +94,10 @@ namespace Partner_API.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    product = table.Column<int>(type: "integer", nullable: false),
-                    partner = table.Column<int>(type: "integer", nullable: false),
-                    count = table.Column<int>(type: "integer", nullable: false),
-                    date = table.Column<DateOnly>(type: "date", nullable: false),
-                    PartnerId = table.Column<int>(type: "integer", nullable: true),
-                    ProductId = table.Column<int>(type: "integer", nullable: true)
+                    ProductId = table.Column<int>(type: "integer", nullable: false),
+                    PartnerId = table.Column<int>(type: "integer", nullable: false),
+                    Count = table.Column<int>(type: "integer", nullable: false),
+                    Date = table.Column<DateOnly>(type: "date", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -108,12 +106,14 @@ namespace Partner_API.Migrations
                         name: "FK_Order_Partner_PartnerId",
                         column: x => x.PartnerId,
                         principalTable: "Partner",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Order_Product_ProductId",
                         column: x => x.ProductId,
                         principalTable: "Product",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -127,9 +127,9 @@ namespace Partner_API.Migrations
                 column: "ProductId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Product_TypeId",
+                name: "IX_Product_ProductTypeId",
                 table: "Product",
-                column: "TypeId");
+                column: "ProductTypeId");
         }
 
         /// <inheritdoc />

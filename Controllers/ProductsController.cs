@@ -25,7 +25,14 @@ namespace Partner_API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Product>>> GetProduct()
         {
-            return await _context.Product.ToListAsync();
+            var products = await _context.Product.ToListAsync();
+            if (products == null) { return NotFound(); }
+
+            foreach (var product in products)
+            {
+                product.ProductType = await _context.ProductType.FindAsync(product.ProductTypeId);
+            }
+            return products;
         }
 
         // GET: api/Products/5
@@ -33,11 +40,9 @@ namespace Partner_API.Controllers
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
             var product = await _context.Product.FindAsync(id);
+            if (product == null) { return NotFound(); }
 
-            if (product == null)
-            {
-                return NotFound();
-            }
+            product.ProductType = await _context.ProductType.FindAsync(product.ProductTypeId);
 
             return product;
         }

@@ -7,7 +7,7 @@ namespace Partner_API.Data.Models
     {
         [Key]
         public int Id { get; set; }
-        public string type { get; set; }
-        public double percentDefective { get; set; }
+        public string Type { get; set; }
+        public double PercentDefective { get; set; }
     }
 }

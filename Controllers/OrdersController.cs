@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Partner_API.Data;
 using Partner_API.Data.Models;
+using static NuGet.Packaging.PackagingConstants;
 
 namespace Partner_API.Controllers
 {
@@ -25,7 +26,15 @@ namespace Partner_API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Order>>> GetOrder()
         {
-            return await _context.Order.ToListAsync();
+            var orders = await _context.Order.ToListAsync();
+            if (orders == null) {return NotFound();}
+
+            foreach (var order in orders)
+            {
+                order.Partner = await _context.Partner.FindAsync(order.PartnerId);
+                order.Product = await _context.Product.FindAsync(order.ProductId);
+            }
+            return orders;
         }
 
         // GET: api/Orders/5
@@ -33,11 +42,10 @@ namespace Partner_API.Controllers
         public async Task<ActionResult<Order>> GetOrder(int id)
         {
             var order = await _context.Order.FindAsync(id);
+            if (order == null) { return NotFound(); }
 
-            if (order == null)
-            {
-                return NotFound();
-            }
+            order.Partner = await _context.Partner.FindAsync(order.PartnerId);
+            order.Product = await _context.Product.FindAsync(order.ProductId);
 
             return order;
         }
@@ -47,27 +55,15 @@ namespace Partner_API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutOrder(int id, Order order)
         {
-            if (id != order.Id)
-            {
-                return BadRequest();
-            }
+            if (id != order.Id){return BadRequest();}
 
             _context.Entry(order).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
+            try{await _context.SaveChangesAsync();}
             catch (DbUpdateConcurrencyException)
             {
-                if (!OrderExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                if (!OrderExists(id)){return NotFound();}
+                else{throw;}
             }
 
             return NoContent();
@@ -89,10 +85,7 @@ namespace Partner_API.Controllers
         public async Task<IActionResult> DeleteOrder(int id)
         {
             var order = await _context.Order.FindAsync(id);
-            if (order == null)
-            {
-                return NotFound();
-            }
+            if (order == null){return NotFound();}
 
             _context.Order.Remove(order);
             await _context.SaveChangesAsync();
