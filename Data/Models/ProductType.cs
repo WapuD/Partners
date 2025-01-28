@@ -7,7 +7,7 @@ namespace Partner_API.Data.Models
     {
         [Key]
         public int Id { get; set; }
-        public string name { get; set; }
-        public double koef { get; set; }
+        public string Name { get; set; }
+        public double Koef { get; set; }
     }
 }
