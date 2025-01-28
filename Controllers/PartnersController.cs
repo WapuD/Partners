@@ -23,23 +23,41 @@ namespace Partner_API.Controllers
 
         // GET: api/Partners
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Partner>>> GetPartner()
+        public async Task<ActionResult<IEnumerable<Partner>>> GetPartnerAsync()
         {
             return await _context.Partner.ToListAsync();
         }
 
         // GET: api/Partners/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Partner>> GetPartner(int id)
+        public async Task<ActionResult<Partner>> GetPartnerAsync(int id)
         {
             var partner = await _context.Partner.FindAsync(id);
 
-            if (partner == null)
-            {
-                return NotFound();
-            }
+            if (partner == null){return NotFound();}
 
             return partner;
+        }
+
+        // GET: api/Partners/Discount/5
+        [HttpGet("Discount/{id}")]
+        public async Task<ActionResult<int>> GetPartner(int id)
+        {
+            var sells = 0;
+            var discount = 0;
+            var partner = await _context.Partner.FindAsync(id);
+            var orders = await _context.Order.Where(o => o.PartnerId == id).ToListAsync();
+            foreach (var order in orders)
+            {
+                var product = await _context.Product.FindAsync(order.ProductId);
+                sells += product.MinCost * order.Count;
+            }
+            if (partner == null) { return NotFound(); }
+            if (sells <= 1000) { discount = 5; }
+            else if (sells <= 10000) { discount = 10; }
+            else if (sells <= 100000) { discount = 15; }
+            else { discount = 20; }
+            return discount;
         }
 
         // PUT: api/Partners/5
