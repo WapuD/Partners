@@ -23,7 +23,7 @@ namespace Partner_API.Controllers
 
         // GET: api/ProductTypes
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ProductType>>> GetProductType()
+        public async Task<ActionResult<IEnumerable<ProductType>>> GetProductTypeAsync()
         {
             return await _context.ProductType.ToListAsync();
         }

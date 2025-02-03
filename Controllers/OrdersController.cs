@@ -37,6 +37,23 @@ namespace Partner_API.Controllers
             return orders;
         }
 
+        // Get("/Orders/History/{id}")
+        [HttpGet("History/{id}")]
+        public async Task<ActionResult<IEnumerable<Order>>> GetHistoryAsync(int id)
+        {
+            var orders = await _context.Order.Where(o => o.PartnerId == id).ToListAsync();
+
+            if (orders == null) { return NotFound(); }
+
+            foreach (var order in orders)
+            {
+                order.Partner = await _context.Partner.FindAsync(order.PartnerId);
+                order.Product = await _context.Product.FindAsync(order.ProductId);
+                order.Product.ProductType = await _context.ProductType.FindAsync(order.Product.ProductTypeId);
+            }
+            return orders;
+        }
+
         // GET: api/Orders/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Order>> GetOrder(int id)

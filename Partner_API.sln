@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Partner_API", "Partner_API.csproj", "{19586DD0-D45D-4941-82BF-70A40DAD1412}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Partner_WEB", "..\Partner_WEB\Partner_WEB.csproj", "{2574E3AF-F1D8-4749-BD1C-7B9D160E564F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Partner_WEB", "..\Partner_WEB\Partner_WEB.csproj", "{2574E3AF-F1D8-4749-BD1C-7B9D160E564F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -41,7 +41,7 @@ namespace Partner_API.Controllers
 
         // GET: api/Partners/Discount/5
         [HttpGet("Discount/{id}")]
-        public async Task<ActionResult<int>> GetPartner(int id)
+        public async Task<ActionResult<int>> GetPartnerDiscountAsync(int id)
         {
             var sells = 0;
             var discount = 0;
@@ -50,26 +50,21 @@ namespace Partner_API.Controllers
             foreach (var order in orders)
             {
                 var product = await _context.Product.FindAsync(order.ProductId);
-                sells += product.MinCost * order.Count;
+                sells += Convert.ToInt32(product.MinCost * order.Count);
             }
             if (partner == null) { return NotFound(); }
-            if (sells <= 1000) { discount = 5; }
-            else if (sells <= 10000) { discount = 10; }
-            else if (sells <= 100000) { discount = 15; }
-            else { discount = 20; }
+            if (10000 <= sells || sells < 50000) { discount = 5; }
+            else if (50000 <= sells || sells < 300000) { discount = 10; }
+            else if (300000 <= sells) { discount = 15; }
+            else { discount = 0; }
             return discount;
         }
 
         // PUT: api/Partners/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutPartner(int id, Partner partner)
+        [HttpPut("{partner}")]
+        public async Task<IActionResult> PutPartner(Partner partner)
         {
-            if (id != partner.Id)
-            {
-                return BadRequest();
-            }
-
             _context.Entry(partner).State = EntityState.Modified;
 
             try
@@ -78,7 +73,7 @@ namespace Partner_API.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!PartnerExists(id))
+                if (!PartnerExists(partner.Id))
                 {
                     return NotFound();
                 }
