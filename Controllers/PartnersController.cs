@@ -34,7 +34,7 @@ namespace Partner_API.Controllers
         {
             var partner = await _context.Partner.FindAsync(id);
 
-            if (partner == null){return NotFound();}
+            if (partner == null) { return NotFound(); }
 
             return partner;
         }
@@ -86,10 +86,9 @@ namespace Partner_API.Controllers
             return NoContent();
         }
 
-        // POST: api/Partners
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Partner>> PostPartner(Partner partner)
+        // POST: api/Partners/partner
+        [HttpPost("{partner}")]
+        public async Task<ActionResult<Partner>> AddPartnerAsync(Partner partner)
         {
             _context.Partner.Add(partner);
             await _context.SaveChangesAsync();
