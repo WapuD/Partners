@@ -36,7 +36,6 @@ namespace Partner_API.Data.Models
         public string House { get; set; }
         [StringLength(12, ErrorMessage = "Поле не может содержать больше 12 символов")]
         public string Inn { get; set; }
-        [StringLength(3, ErrorMessage = "Поле не может содержать больше 3 символов")]
         [Range(0, 10, ErrorMessage = "Значение должно быть в диапазоне от 0 до 10")]
         public int Rating { get; set; }
     }
