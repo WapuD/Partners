@@ -16,6 +16,7 @@ namespace Partner_API.Data
 
         public DbSet<Partner_API.Data.Models.Order> Order { get; set; } = default!;
         public DbSet<Partner_API.Data.Models.Partner> Partner { get; set; } = default!;
+        public DbSet<Partner_API.Data.Models.PartnerType> PartnerType { get; set; } = default!;
         public DbSet<Partner_API.Data.Models.Product> Product { get; set; } = default!;
         public DbSet<Partner_API.Data.Models.ProductType> ProductType { get; set; } = default!;
         public DbSet<Partner_API.Data.Models.Material> Material { get; set; } = default!;
