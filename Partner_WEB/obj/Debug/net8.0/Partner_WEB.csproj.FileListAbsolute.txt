@@ -261,3 +261,4 @@ C:\Users\sarva\source\repos\Partner\Partner_WEB\obj\Debug\net8.0\refint\Partner_
 C:\Users\sarva\source\repos\Partner\Partner_WEB\obj\Debug\net8.0\Partner_WEB.pdb
 C:\Users\sarva\source\repos\Partner\Partner_WEB\obj\Debug\net8.0\Partner_WEB.genruntimeconfig.cache
 C:\Users\sarva\source\repos\Partner\Partner_WEB\obj\Debug\net8.0\ref\Partner_WEB.dll
+C:\Users\sarva\source\repos\Partner\Partner_WEB\obj\Debug\net8.0\Partner_WEB.sourcelink.json
