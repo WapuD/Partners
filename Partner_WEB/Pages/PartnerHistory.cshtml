@@ -1,0 +1,79 @@
+﻿@page
+@model PHModel
+@{
+    ViewData["Title"] = "История продаж";
+}
+
+<div class="partners-container">
+    @if (Model.Sells != null && Model.Sells.Any())
+    {
+        foreach (var sell in Model.Sells)
+        {
+            <div class="partner-item">
+                <div class="partner-info">
+                    <h3>Наименование: @sell.Product.Name</h3>
+                    <p>Минимальная цена: @sell.Product.MinCost</p>
+                    <p>Категория: @sell.Product.ProductType.Name</p>
+                    <p>Коэфицент: @sell.Product.ProductType.Koef</p>
+                </div>
+                @* <div class="partner-progress">
+                    <div class="progress-bar" style="width: @Model.Discount[@partner.Id - 1]%"></div>
+                    <span class="rating">@Model.Discount[@partner.Id - 1]%</span>
+                </div>
+                <a class="nav-link text-dark" asp-area="" asp-page="/PartnerRedact">Редактировать</a>
+                <a class="nav-link text-dark" asp-area="" asp-page="/PartnerHistory">История продаж</a> *@
+            </div>
+        }
+    }
+    else
+    {
+        <p>Нет истории.</p>
+    }
+</div>
+
+<style>
+    .partners-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .partner-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .partner-info {
+        flex: 1;
+    }
+
+    .partner-progress {
+        position: relative;
+        width: 20%;
+        height: 20px;
+        background-color: #f3f3f3;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .progress-bar {
+        height: 100%;
+        background-color: #4caf50;
+        transition: width 0.3s ease;
+    }
+
+    .rating {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+    }
+</style>

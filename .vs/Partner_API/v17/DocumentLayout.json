@@ -1,0 +1,463 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2574E3AF-F1D8-4749-BD1C-7B9D160E564F}|..\\Partner_WEB\\Partner_WEB.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_web\\partner_web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19586DD0-D45D-4941-82BF-70A40DAD1412}|Partner_API.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_api\\partner_api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{19586DD0-D45D-4941-82BF-70A40DAD1412}|Partner_API.csproj|solutionrelative:partner_api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19586DD0-D45D-4941-82BF-70A40DAD1412}|Partner_API.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_api\\partner_api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{19586DD0-D45D-4941-82BF-70A40DAD1412}|Partner_API.csproj|solutionrelative:partner_api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2574E3AF-F1D8-4749-BD1C-7B9D160E564F}|..\\Partner_WEB\\Partner_WEB.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_web\\pages\\orderlist.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2574E3AF-F1D8-4749-BD1C-7B9D160E564F}|..\\Partner_WEB\\Partner_WEB.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_web\\pages\\partnerredact.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2574E3AF-F1D8-4749-BD1C-7B9D160E564F}|..\\Partner_WEB\\Partner_WEB.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_web\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2574E3AF-F1D8-4749-BD1C-7B9D160E564F}|..\\Partner_WEB\\Partner_WEB.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_web\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2574E3AF-F1D8-4749-BD1C-7B9D160E564F}|..\\Partner_WEB\\Partner_WEB.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_web\\pages\\partneradd.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19586DD0-D45D-4941-82BF-70A40DAD1412}|Partner_API.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19586DD0-D45D-4941-82BF-70A40DAD1412}|Partner_API.csproj|solutionrelative:controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2574E3AF-F1D8-4749-BD1C-7B9D160E564F}|..\\Partner_WEB\\Partner_WEB.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_web\\data\\interface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2574E3AF-F1D8-4749-BD1C-7B9D160E564F}|..\\Partner_WEB\\Partner_WEB.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_web\\pages\\orderlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19586DD0-D45D-4941-82BF-70A40DAD1412}|Partner_API.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_api\\data\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19586DD0-D45D-4941-82BF-70A40DAD1412}|Partner_API.csproj|solutionrelative:data\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2574E3AF-F1D8-4749-BD1C-7B9D160E564F}|..\\Partner_WEB\\Partner_WEB.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_web\\pages\\partnerhistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2574E3AF-F1D8-4749-BD1C-7B9D160E564F}|..\\Partner_WEB\\Partner_WEB.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_web\\pages\\partnerredact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2574E3AF-F1D8-4749-BD1C-7B9D160E564F}|..\\Partner_WEB\\Partner_WEB.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_web\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2574E3AF-F1D8-4749-BD1C-7B9D160E564F}|..\\Partner_WEB\\Partner_WEB.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_web\\pages\\partneradd.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19586DD0-D45D-4941-82BF-70A40DAD1412}|Partner_API.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_api\\controllers\\partnerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19586DD0-D45D-4941-82BF-70A40DAD1412}|Partner_API.csproj|solutionrelative:controllers\\partnerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19586DD0-D45D-4941-82BF-70A40DAD1412}|Partner_API.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_api\\controllers\\partnertypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19586DD0-D45D-4941-82BF-70A40DAD1412}|Partner_API.csproj|solutionrelative:controllers\\partnertypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19586DD0-D45D-4941-82BF-70A40DAD1412}|Partner_API.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_api\\data\\models\\partner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19586DD0-D45D-4941-82BF-70A40DAD1412}|Partner_API.csproj|solutionrelative:data\\models\\partner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19586DD0-D45D-4941-82BF-70A40DAD1412}|Partner_API.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_api\\data\\models\\partnertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19586DD0-D45D-4941-82BF-70A40DAD1412}|Partner_API.csproj|solutionrelative:data\\models\\partnertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2574E3AF-F1D8-4749-BD1C-7B9D160E564F}|..\\Partner_WEB\\Partner_WEB.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2574E3AF-F1D8-4749-BD1C-7B9D160E564F}|..\\Partner_WEB\\Partner_WEB.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19586DD0-D45D-4941-82BF-70A40DAD1412}|Partner_API.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{19586DD0-D45D-4941-82BF-70A40DAD1412}|Partner_API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sarva\\source\\repos\\Partner_WEB\\Partner_WEB.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sarva\\source\\repos\\Partner_WEB\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19586DD0-D45D-4941-82BF-70A40DAD1412}|Partner_API.csproj|c:\\users\\sarva\\source\\repos\\partner\\partner_api\\migrations\\20250317053636_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19586DD0-D45D-4941-82BF-70A40DAD1412}|Partner_API.csproj|solutionrelative:migrations\\20250317053636_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 705,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Partner_API",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\Partner_API.csproj",
+              "RelativeDocumentMoniker": "Partner_API.csproj",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\Partner_API.csproj",
+              "RelativeToolTip": "Partner_API.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-17T07:17:14.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Partner_WEB",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Partner_WEB.csproj",
+              "RelativeDocumentMoniker": "..\\Partner_WEB\\Partner_WEB.csproj",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Partner_WEB.csproj",
+              "RelativeToolTip": "..\\Partner_WEB\\Partner_WEB.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-17T07:17:03.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderList.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Pages\\OrderList.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\Partner_WEB\\Pages\\OrderList.cshtml.cs",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Pages\\OrderList.cshtml.cs",
+              "RelativeToolTip": "..\\Partner_WEB\\Pages\\OrderList.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T07:06:52.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\Data\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\Data\\Models\\Order.cs",
+              "RelativeToolTip": "Data\\Models\\Order.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T07:06:04.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "OrderList.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Pages\\OrderList.cshtml",
+              "RelativeDocumentMoniker": "..\\Partner_WEB\\Pages\\OrderList.cshtml",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Pages\\OrderList.cshtml",
+              "RelativeToolTip": "..\\Partner_WEB\\Pages\\OrderList.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFAAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-17T07:05:13.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PartnerHistory.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Pages\\PartnerHistory.cshtml",
+              "RelativeDocumentMoniker": "..\\Partner_WEB\\Pages\\PartnerHistory.cshtml",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Pages\\PartnerHistory.cshtml",
+              "RelativeToolTip": "..\\Partner_WEB\\Pages\\PartnerHistory.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-17T06:48:26.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "..\\Partner_WEB\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "..\\Partner_WEB\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAAAI0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-17T06:23:14.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PartnerAdd.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Pages\\PartnerAdd.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\Partner_WEB\\Pages\\PartnerAdd.cshtml.cs",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Pages\\PartnerAdd.cshtml.cs",
+              "RelativeToolTip": "..\\Partner_WEB\\Pages\\PartnerAdd.cshtml.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAADkAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T06:22:48.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PartnerAdd.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Pages\\PartnerAdd.cshtml",
+              "RelativeDocumentMoniker": "..\\Partner_WEB\\Pages\\PartnerAdd.cshtml",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Pages\\PartnerAdd.cshtml",
+              "RelativeToolTip": "..\\Partner_WEB\\Pages\\PartnerAdd.cshtml",
+              "ViewState": "AQIAAI8AAAAAAAAAAAAQwLwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-17T06:22:46.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Partner.cs",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\Data\\Models\\Partner.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\Partner.cs",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\Data\\Models\\Partner.cs",
+              "RelativeToolTip": "Data\\Models\\Partner.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAkwDsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T05:49:05.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PartnerTypesController.cs",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\Controllers\\PartnerTypesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PartnerTypesController.cs",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\Controllers\\PartnerTypesController.cs",
+              "RelativeToolTip": "Controllers\\PartnerTypesController.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAgwE0AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T06:00:30.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PartnerType.cs",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\Data\\Models\\PartnerType.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\PartnerType.cs",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\Data\\Models\\PartnerType.cs",
+              "RelativeToolTip": "Data\\Models\\PartnerType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T05:50:57.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PartnerRedact.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Pages\\PartnerRedact.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\Partner_WEB\\Pages\\PartnerRedact.cshtml.cs",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Pages\\PartnerRedact.cshtml.cs",
+              "RelativeToolTip": "..\\Partner_WEB\\Pages\\PartnerRedact.cshtml.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAowC8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T05:48:52.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PartnerRedact.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Pages\\PartnerRedact.cshtml",
+              "RelativeDocumentMoniker": "..\\Partner_WEB\\Pages\\PartnerRedact.cshtml",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Pages\\PartnerRedact.cshtml",
+              "RelativeToolTip": "..\\Partner_WEB\\Pages\\PartnerRedact.cshtml",
+              "ViewState": "AQIAAJAAAAAAAAAAAAAQwL0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-17T05:48:27.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Pages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\Partner_WEB\\Pages\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Pages\\Index.cshtml.cs",
+              "RelativeToolTip": "..\\Partner_WEB\\Pages\\Index.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T05:40:54.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\Partner_WEB\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Pages\\Index.cshtml",
+              "RelativeToolTip": "..\\Partner_WEB\\Pages\\Index.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACoAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-17T05:40:50.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-17T05:37:50.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\appsettings.json",
+              "RelativeDocumentMoniker": "..\\Partner_WEB\\appsettings.json",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\appsettings.json",
+              "RelativeToolTip": "..\\Partner_WEB\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-17T05:37:46.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Program.cs",
+              "RelativeDocumentMoniker": "..\\Partner_WEB\\Program.cs",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Program.cs",
+              "RelativeToolTip": "..\\Partner_WEB\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T05:36:51.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "20250317053636_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\Migrations\\20250317053636_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250317053636_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\Migrations\\20250317053636_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20250317053636_InitialCreate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T05:36:36.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Interface.cs",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Data\\Interface.cs",
+              "RelativeDocumentMoniker": "..\\Partner_WEB\\Data\\Interface.cs",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_WEB\\Data\\Interface.cs",
+              "RelativeToolTip": "..\\Partner_WEB\\Data\\Interface.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAgwBYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T05:34:19.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Controllers\\OrdersController.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAAADMAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T05:29:06.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Partner_WEB.csproj",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner_WEB\\Partner_WEB.csproj",
+              "RelativeDocumentMoniker": "..\\..\\Partner_WEB\\Partner_WEB.csproj",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner_WEB\\Partner_WEB.csproj",
+              "RelativeToolTip": "..\\..\\Partner_WEB\\Partner_WEB.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-17T05:26:08.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PartnersController.cs",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\Controllers\\PartnersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PartnersController.cs",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\Controllers\\PartnersController.cs",
+              "RelativeToolTip": "Controllers\\PartnersController.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAAAFsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T05:26:38.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner_WEB\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\Partner_WEB\\Program.cs",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner_WEB\\Program.cs",
+              "RelativeToolTip": "..\\..\\Partner_WEB\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T05:26:17.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Partner_API.http",
+              "DocumentMoniker": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\Partner_API.http",
+              "RelativeDocumentMoniker": "Partner_API.http",
+              "ToolTip": "C:\\Users\\sarva\\source\\repos\\Partner\\Partner_API\\Partner_API.http",
+              "RelativeToolTip": "Partner_API.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-02-02T22:21:46.038Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 168,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

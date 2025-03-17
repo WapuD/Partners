@@ -1,0 +1,113 @@
+﻿@page
+@model Partner_WEB.Pages.OrderHistoryModel
+@{
+    ViewData["Title"] = "История заказов";
+}
+
+<style>
+    :root {
+        --primary-bg: #FFFFFF;
+        --secondary-bg: #F4E8D3;
+        --accent-color: #67BA80;
+    }
+
+    body {
+        background-color: var(--primary-bg);
+    }
+
+    .history-container {
+        max-width: 1200px;
+        margin: 20px auto;
+        background-color: var(--secondary-bg);
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: var(--accent-color);
+        color: white;
+        border-radius: 5px 5px 0 0;
+    }
+
+    td {
+        background-color: white;
+    }
+
+    .back-button {
+        margin-bottom: 15px;
+        color: var(--accent-color);
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 15px;
+        border-radius: 5px;
+        border: 1px solid var(--accent-color);
+        transition: background-color 0.3s ease;
+    }
+
+        .back-button:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+    .no-orders {
+        text-align: center;
+        color: #666;
+        padding: 20px;
+    }
+</style>
+
+<div class="history-container">
+    <h1 class="mb-4" style="color: var(--accent-color)">История заказов</h1>
+
+    <a asp-page="/PartnerList" class="back-button">Вернуться к списку</a>
+
+    @if (Model.Orders != null && Model.Orders.Any())
+    {
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Дата</th>
+                        <th>Продукт</th>
+                        <th>Количество</th>
+                        <th>Сумма</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var order in Model.Orders)
+                    {
+                        <tr>
+                            <td>@order.Id</td>
+                            <td>@order.Date.ToString("dd.MM.yyyy")</td>
+                            <td>@order.Product?.Name</td>
+                            <td>@order.Count</td>
+                            <td>@(order.Count * order.Product?.MinCost ?? 0)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <p class="no-orders">Нет доступных заказов.</p>
+    }
+</div>

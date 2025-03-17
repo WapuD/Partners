@@ -1,0 +1,188 @@
+﻿@page
+@model Partner_WEB.Pages.PAModel
+@{
+    ViewData["Title"] = "Редактирование партнера";
+}
+
+<style>
+    :root {
+        --primary-bg: #FFFFFF;
+        --secondary-bg: #F4E8D3;
+        --accent-color: #67BA80;
+    }
+
+    body {
+        background-color: var(--primary-bg);
+    }
+
+    .edit-container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: var(--secondary-bg);
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+        .form-group label {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+    .form-control {
+        border-color: #ddd;
+        border-radius: 4px;
+        padding: 10px;
+        transition: border-color 0.3s ease;
+    }
+
+        .form-control:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 5px rgba(103, 186, 128, 0.2);
+        }
+
+    .btn-primary {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-primary:hover {
+            background-color: #4a9e7b;
+        }
+
+    .btn-secondary {
+        color: var(--accent-color);
+        border-color: var(--accent-color);
+        transition: color 0.3s ease;
+    }
+
+        .btn-secondary:hover {
+            color: white;
+            background-color: var(--accent-color);
+        }
+
+    .text-danger {
+        color: #dc3545;
+        font-size: 0.9em;
+        margin-top: 5px;
+        display: block;
+    }
+
+    .validation-summary-errors {
+        color: #dc3545;
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 15px;
+    }
+
+        .validation-summary-errors ul {
+            padding-left: 20px;
+        }
+</style>
+
+<div class="edit-container">
+    <h1 class="mb-4" style="color: var(--accent-color)">Редактирование партнера</h1>
+
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="validation-summary-errors"></div>
+
+        <div class="form-group">
+            <label asp-for="Partner.Type" class="control-label">Тип</label>
+            <select asp-for="Partner.Type"
+                    asp-items="@Model.TypeList"
+                    class="form-control">
+            </select>
+            <span asp-validation-for="Partner.Type" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Partner.Title" class="control-label">Название</label>
+            <input asp-for="Partner.Title" class="form-control" />
+            <span asp-validation-for="Partner.Title" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Partner.Surname" class="control-label">Фамилия</label>
+            <input asp-for="Partner.Surname" class="form-control" />
+            <span asp-validation-for="Partner.Surname" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Partner.Name" class="control-label">Имя</label>
+            <input asp-for="Partner.Name" class="form-control" />
+            <span asp-validation-for="Partner.Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Partner.Patronumic" class="control-label">Отчество</label>
+            <input asp-for="Partner.Patronumic" class="form-control" />
+            <span asp-validation-for="Partner.Patronumic" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Partner.Email" class="control-label">Email</label>
+            <input asp-for="Partner.Email" class="form-control" />
+            <span asp-validation-for="Partner.Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Partner.Phone" class="control-label">Телефон</label>
+            <input asp-for="Partner.Phone" class="form-control" />
+            <span asp-validation-for="Partner.Phone" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Partner.Index" class="control-label">Индекс</label>
+            <input asp-for="Partner.Index" class="form-control" />
+            <span asp-validation-for="Partner.Index" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Partner.Region" class="control-label">Регион</label>
+            <input asp-for="Partner.Region" class="form-control" />
+            <span asp-validation-for="Partner.Region" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Partner.City" class="control-label">Город</label>
+            <input asp-for="Partner.City" class="form-control" />
+            <span asp-validation-for="Partner.City" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Partner.Street" class="control-label">Улица</label>
+            <input asp-for="Partner.Street" class="form-control" />
+            <span asp-validation-for="Partner.Street" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Partner.House" class="control-label">Дом</label>
+            <input asp-for="Partner.House" class="form-control" />
+            <span asp-validation-for="Partner.House" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Partner.Inn" class="control-label">ИНН</label>
+            <input asp-for="Partner.Inn" class="form-control" />
+            <span asp-validation-for="Partner.Inn" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Partner.Rating" class="control-label">Рейтинг</label>
+            <input asp-for="Partner.Rating" class="form-control" />
+            <span asp-validation-for="Partner.Rating" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-flex justify-content-end gap-3">
+            <button type="submit" class="btn btn-primary">Сохранить</button>
+            <a asp-page="./Index" class="btn btn-secondary">Отмена</a>
+        </div>
+    </form>
+</div>

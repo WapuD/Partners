@@ -1,0 +1,85 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Партнёры";
+}
+
+    <section>
+        <form id="account" method="post" novalidate="novalidate">
+            <h2>Авторизация.</h2>
+            <hr>
+
+            <div class="form-floating mb-3">
+            <input class="form-control" autocomplete="username" aria-required="true" placeholder="Логин" type="text" data-val="true" data-val-email="Поле логин содержит некорректные данные." data-val-required="Поле логин обязательно к заполнению." id="Login" name="Login" value="">
+                <label class="form-label" for="Email">Логин</label>
+                <span class="text-danger field-validation-valid" data-valmsg-for="Input.Email" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-floating mb-3">
+            <input class="form-control" autocomplete="current-password" aria-required="true" placeholder="Пароль" type="password" data-val="true" data-val-required="Поле пароль обязательно к заполнению." id="Password" name="Password">
+                <label class="form-label" for="Password">Пароль</label>
+                <span class="text-danger field-validation-valid" data-valmsg-for="Input.Password" data-valmsg-replace="true"></span>
+            </div>
+            <div>
+                <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Авторизоваться</button>
+            </div>
+            <div>
+                <p>
+                    <a href="/Identity/Account/Register?returnUrl=%2F">Зарегистрироваться</a>
+                </p>
+            </div>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PhuDGlOBPVKloqrZHYGc8Eusy5W9UozHnytkav1oe3BbP43uSdsW_KLjBN1qZcL8ikrmjiFeRPQ1Zwl5wn48_g7yJQsmyUHYOAXcRmeSQJoHWSE2qoSMO4TI3lsxpaUPaDRgDt6nS3JhmB-XrMldpw"><input name="Input.RememberMe" type="hidden" value="false">
+        </form>
+    </section>
+
+<style>
+
+    .col-md-4{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .partners-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .partner-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .partner-info {
+        flex: 1;
+    }
+
+    .partner-progress {
+        position: relative;
+        width: 20%;
+        height: 20px;
+        background-color: #f3f3f3;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .progress-bar {
+        height: 100%;
+        background-color: #4caf50;
+        transition: width 0.3s ease;
+    }
+
+    .rating {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+    }
+</style>

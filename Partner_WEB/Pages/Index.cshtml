@@ -1,0 +1,144 @@
+﻿@page
+@model Partner_WEB.Pages.PartnerListModel
+@{
+    ViewData["Title"] = "Партнёры";
+
+    <link rel="icon" type="image/png" href="~/favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="~/favicon.ico" />
+}
+<head>
+
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<div class="partners-container">
+    @if (Model.Partners != null && Model.Partners.Any())
+    {
+        foreach (var partner in Model.Partners)
+        {
+            <div class="partner-item">
+                <div class="partner-info">
+                    <h3 title="Тип партнёра">@partner.Type</h3>
+                    <p title="ФИО партнёра">@partner.Surname @partner.Name @partner.Patronumic</p>
+                    <p title="Контактный телефон">@partner.Phone</p>
+                    <p title="Оценка качества обслуживания (0-10)"><strong>Рейтинг:</strong> @partner.Rating</p>
+                </div>
+                <div class="partner-progress">
+                    <div class="progress-bar"
+                         style="width: @Model.Discount[@partner.Id - 1]%"
+                         title="Скидка на основе объёма продаж">
+                    </div>
+                    <span class="rating text-dark"
+                          title="Процентная скидка">@Model.Discount[@partner.Id - 1]%</span>
+                </div>
+                <a class="nav-link text-dark"
+                   asp-route-id="@partner.Id"
+                   asp-page="/PartnerRedact"
+                   title="Редактировать данные партнёра">
+                    Редактировать
+                </a>
+                <a class="nav-link text-dark"
+                   asp-route-id="@partner.Id"
+                   asp-page="/PartnerHistory"
+                   title="Просмотреть историю заказов">
+                    История продаж
+                </a>
+            </div>
+        }
+    }
+    else
+    {
+        <p class="no-partners">Нет доступных партнёров.</p>
+    }
+</div>
+
+<style>
+    :root {
+        --primary-bg: #FFFFFF;
+        --secondary-bg: #F4E8D3;
+        --accent-color: #67BA80;
+    }
+
+    body {
+        background-color: var(--primary-bg);
+    }
+
+    .partners-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        background-color: var(--secondary-bg);
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .partner-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: var(--primary-bg);
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease;
+    }
+
+        .partner-item:hover {
+            transform: translateY(-2px);
+        }
+
+    .partner-info {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+        .partner-info h3 {
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+    .partner-progress {
+        position: relative;
+        width: 25%;
+        height: 30px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .progress-bar {
+        height: 100%;
+        background-color: var(--accent-color);
+        transition: width 0.3s ease;
+    }
+
+    .rating {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .nav-link {
+        color: var(--accent-color) !important;
+        margin-left: 15px;
+        transition: color 0.3s ease;
+    }
+
+        .nav-link:hover {
+            color: #4a9e7b !important;
+        }
+
+    .no-partners {
+        text-align: center;
+        color: #666;
+        padding: 20px;
+    }
+</style>
