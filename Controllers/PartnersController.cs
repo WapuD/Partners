@@ -87,9 +87,11 @@ namespace Partner_API.Controllers
         }
 
         // POST: api/Partners/partner
-        [HttpPost("{partner}")]
+        [HttpPost]
         public async Task<ActionResult<Partner>> AddPartnerAsync(Partner partner)
         {
+            var lastId = await _context.Partner.MaxAsync(p => p.Id);
+            partner.Id = lastId + 1;
             _context.Partner.Add(partner);
             await _context.SaveChangesAsync();
 

@@ -41,7 +41,10 @@ namespace Partner_API.Controllers
         [HttpGet("History/{id}")]
         public async Task<ActionResult<IEnumerable<Order>>> GetHistoryAsync(int id)
         {
-            var orders = await _context.Order.Where(o => o.PartnerId == id).ToListAsync();
+            var orders = await _context.Order
+                        .Include(o => o.Product)
+                        .Where(o => o.PartnerId == id)
+                        .ToListAsync();
 
             if (orders == null) { return NotFound(); }
 
@@ -51,6 +54,7 @@ namespace Partner_API.Controllers
                 order.Product = await _context.Product.FindAsync(order.ProductId);
                 order.Product.ProductType = await _context.ProductType.FindAsync(order.Product.ProductTypeId);
             }
+
             return orders;
         }
 

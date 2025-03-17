@@ -32,24 +32,37 @@ namespace Partner_API.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Type = table.Column<string>(type: "text", nullable: false),
-                    Title = table.Column<string>(type: "text", nullable: false),
-                    Surname = table.Column<string>(type: "text", nullable: false),
-                    Name = table.Column<string>(type: "text", nullable: false),
-                    Patronumic = table.Column<string>(type: "text", nullable: false),
-                    Email = table.Column<string>(type: "text", nullable: false),
+                    Type = table.Column<int>(type: "integer", nullable: false),
+                    Title = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    Surname = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: false),
+                    Name = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: false),
+                    Patronumic = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: false),
+                    Email = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     Phone = table.Column<string>(type: "text", nullable: false),
-                    Index = table.Column<string>(type: "text", nullable: false),
-                    Region = table.Column<string>(type: "text", nullable: false),
-                    City = table.Column<string>(type: "text", nullable: false),
-                    Street = table.Column<string>(type: "text", nullable: false),
-                    House = table.Column<string>(type: "text", nullable: false),
-                    Inn = table.Column<string>(type: "text", nullable: false),
+                    Index = table.Column<string>(type: "character varying(6)", maxLength: 6, nullable: false),
+                    Region = table.Column<string>(type: "character varying(30)", maxLength: 30, nullable: false),
+                    City = table.Column<string>(type: "character varying(30)", maxLength: 30, nullable: false),
+                    Street = table.Column<string>(type: "character varying(30)", maxLength: 30, nullable: false),
+                    House = table.Column<string>(type: "character varying(4)", maxLength: 4, nullable: false),
+                    Inn = table.Column<string>(type: "character varying(12)", maxLength: 12, nullable: false),
                     Rating = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Partner", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PartnerType",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    TypeName = table.Column<string>(type: "text", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PartnerType", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -140,6 +153,9 @@ namespace Partner_API.Migrations
 
             migrationBuilder.DropTable(
                 name: "Order");
+
+            migrationBuilder.DropTable(
+                name: "PartnerType");
 
             migrationBuilder.DropTable(
                 name: "Partner");

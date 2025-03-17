@@ -81,31 +81,38 @@ namespace Partner_API.Migrations
 
                     b.Property<string>("City")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(30)
+                        .HasColumnType("character varying(30)");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("House")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(4)
+                        .HasColumnType("character varying(4)");
 
                     b.Property<string>("Index")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(6)
+                        .HasColumnType("character varying(6)");
 
                     b.Property<string>("Inn")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(12)
+                        .HasColumnType("character varying(12)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)");
 
                     b.Property<string>("Patronumic")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)");
 
                     b.Property<string>("Phone")
                         .IsRequired()
@@ -116,27 +123,47 @@ namespace Partner_API.Migrations
 
                     b.Property<string>("Region")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(30)
+                        .HasColumnType("character varying(30)");
 
                     b.Property<string>("Street")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(30)
+                        .HasColumnType("character varying(30)");
 
                     b.Property<string>("Surname")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)");
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
-                    b.Property<string>("Type")
+                    b.Property<int>("Type")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Partner");
+                });
+
+            modelBuilder.Entity("Partner_API.Data.Models.PartnerType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("TypeName")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Partner");
+                    b.ToTable("PartnerType");
                 });
 
             modelBuilder.Entity("Partner_API.Data.Models.Product", b =>
