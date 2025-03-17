@@ -14,22 +14,22 @@ namespace Partner_API.Data.Models
 
         [Required(ErrorMessage = "Название организации обязательно")]
         [StringLength(100, ErrorMessage = "Название не может превышать 100 символов")]
-        [RegularExpression(@"^[а-яА-ЯёЁ\s\-]+$", ErrorMessage = "Название может содержать только буквы, пробелы и дефисы")]
+        [RegularExpression(@"^[а-яА-ЯёЁa-zA-Z\s\-\.]+$", ErrorMessage = "Название может содержать буквы, пробелы, дефисы и точки")]
         public string Title { get; set; }
 
         [Required(ErrorMessage = "Фамилия обязательна")]
         [StringLength(20, ErrorMessage = "Фамилия не может содержать больше 20 символов")]
-        [RegularExpression(@"^[а-яА-ЯёЁ\-]+$", ErrorMessage = "Фамилия может содержать только буквы и дефисы")]
+        [RegularExpression(@"^[а-яА-ЯёЁa-zA-Z\-]+$", ErrorMessage = "Фамилия может содержать буквы и дефисы")]
         public string Surname { get; set; }
 
         [Required(ErrorMessage = "Имя обязательное")]
         [StringLength(20, ErrorMessage = "Имя не может содержать больше 20 символов")]
-        [RegularExpression(@"^[а-яА-ЯёЁ\-]+$", ErrorMessage = "Имя может содержать только буквы и дефисы")]
+        [RegularExpression(@"^[а-яА-ЯёЁa-zA-Z\-]+$", ErrorMessage = "Имя может содержать буквы и дефисы")]
         public string Name { get; set; }
 
         [Required(ErrorMessage = "Отчество обязательное")]
         [StringLength(20, ErrorMessage = "Отчество не может содержать больше 20 символов")]
-        [RegularExpression(@"^[а-яА-ЯёЁ\-]+$", ErrorMessage = "Отчество может содержать только буквы и дефисы")]
+        [RegularExpression(@"^[а-яА-ЯёЁa-zA-Z\-]+$", ErrorMessage = "Отчество может содержать буквы и дефисы")]
         public string Patronumic { get; set; }
 
         [Required(ErrorMessage = "Email обязательное")]
@@ -40,7 +40,7 @@ namespace Partner_API.Data.Models
 
         [Required(ErrorMessage = "Телефон обязательный")]
         [DataType(DataType.PhoneNumber)]
-        [RegularExpression(@"^\+7\d{10}$", ErrorMessage = "Некорректный формат телефона (+7XXXXXXXXXX)")]
+        [RegularExpression(@"^(\+7|8)\d{10}$", ErrorMessage = "Некорректный формат телефона (+7XXXXXXXXXX или 8XXXXXXXXXX)")]
         public string Phone { get; set; }
 
         [Required(ErrorMessage = "Индекс обязательный")]
@@ -50,17 +50,17 @@ namespace Partner_API.Data.Models
 
         [Required(ErrorMessage = "Регион обязательный")]
         [StringLength(30, ErrorMessage = "Регион не может превышать 30 символов")]
-        [RegularExpression(@"^[а-яА-ЯёЁ\s\-\.]+$", ErrorMessage = "Регион может содержать только буквы, пробелы, дефисы и точки")]
+        [RegularExpression(@"^[а-яА-ЯёЁa-zA-Z\s\-\.]+$", ErrorMessage = "Регион может содержать буквы, пробелы, дефисы и точки")]
         public string Region { get; set; }
 
         [Required(ErrorMessage = "Город обязательный")]
         [StringLength(30, ErrorMessage = "Город не может превышать 30 символов")]
-        [RegularExpression(@"^[а-яА-ЯёЁ\s\-\.]+$", ErrorMessage = "Город может содержать только буквы, пробелы, дефисы и точки")]
+        [RegularExpression(@"^[а-яА-ЯёЁa-zA-Z\s\-\.]+$", ErrorMessage = "Город может содержать буквы, пробелы, дефисы и точки")]
         public string City { get; set; }
 
         [Required(ErrorMessage = "Улица обязательная")]
         [StringLength(30, ErrorMessage = "Улица не может превышать 30 символов")]
-        [RegularExpression(@"^[а-яА-ЯёЁ\s\-\.]+$", ErrorMessage = "Улица может содержать только буквы, пробелы, дефисы и точки")]
+        [RegularExpression(@"^[а-яА-ЯёЁa-zA-Z\s\-\.]+$", ErrorMessage = "Улица может содержать буквы, пробелы, дефисы и точки")]
         public string Street { get; set; }
 
         [Required(ErrorMessage = "Номер дома обязательный")]
